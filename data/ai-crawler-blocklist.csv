@@ -1,0 +1,42 @@
+name,domain,GPTBot,OAI-SearchBot,ChatGPT-User,ClaudeBot,Claude-User,PerplexityBot,Perplexity-User,Google-Extended,CCBot,Bytespider,blocks_any,has_wildcard
+OpenAI / ChatGPT,openai.com,0,0,0,0,0,0,0,0,0,0,0,1
+Anthropic / Claude,anthropic.com,0,0,0,0,0,0,0,0,0,0,0,1
+Google Gemini,gemini.google.com,0,0,0,0,0,0,0,0,0,0,0,1
+Perplexity,perplexity.ai,0,0,0,0,0,0,0,0,0,0,0,1
+Microsoft Copilot,copilot.microsoft.com,0,0,0,0,0,0,0,0,0,0,0,1
+Notion,notion.so,0,0,0,0,0,0,0,0,0,0,0,1
+Canva,canva.com,1,0,0,1,0,0,0,0,1,1,1,1
+Grammarly,grammarly.com,0,0,0,0,0,0,0,0,0,0,0,1
+HubSpot,hubspot.com,0,0,0,0,0,0,0,0,0,0,0,1
+Semrush,semrush.com,0,0,0,0,0,0,0,0,0,0,0,1
+Ahrefs,ahrefs.com,0,0,0,0,0,0,0,0,0,0,0,1
+Zapier,zapier.com,0,0,0,0,0,0,0,0,0,0,0,1
+Jasper,jasper.ai,0,0,0,0,0,0,0,0,0,0,0,1
+Copy.ai,copy.ai,0,0,0,0,0,0,0,0,0,0,0,1
+Descript,descript.com,0,0,0,0,0,0,0,0,0,1,1,1
+ElevenLabs,elevenlabs.io,0,0,0,0,0,0,0,0,0,0,0,1
+Synthesia,synthesia.io,0,0,0,0,0,0,0,0,0,0,0,1
+HeyGen,heygen.com,0,0,0,0,0,0,0,0,0,0,0,1
+Runway,runwayml.com,0,0,0,0,0,0,0,0,0,0,0,1
+ConvertKit / Kit,kit.com,0,0,0,0,0,0,0,0,0,0,0,1
+Mailchimp,mailchimp.com,0,0,0,0,0,0,0,0,0,0,0,1
+beehiiv,beehiiv.com,0,0,0,0,0,0,0,0,0,0,0,1
+Substack,substack.com,0,0,0,0,0,0,0,0,0,0,0,1
+Figma,figma.com,1,1,1,0,0,1,0,1,1,0,1,1
+Miro,miro.com,0,0,0,0,0,0,0,0,0,0,0,1
+Loom,loom.com,1,0,0,0,0,0,0,0,0,0,1,1
+ClickUp,clickup.com,0,0,0,0,0,0,0,0,0,0,0,1
+Monday.com,monday.com,0,0,0,0,0,0,0,0,0,0,0,1
+Trello,trello.com,0,0,0,0,0,0,0,0,0,0,0,1
+Asana,asana.com,0,0,0,0,0,0,0,0,0,0,0,1
+Slack,slack.com,0,0,0,0,0,0,0,0,0,0,0,1
+Airtable,airtable.com,0,0,0,0,0,0,0,0,0,0,0,1
+Calendly,calendly.com,0,0,0,0,0,0,0,0,1,0,1,1
+Webflow,webflow.com,0,0,0,0,0,0,0,0,0,0,0,1
+Wix,wix.com,0,0,0,0,0,0,0,0,0,0,0,1
+Squarespace,squarespace.com,0,0,0,0,0,0,0,0,0,0,0,1
+Shopify,shopify.com,0,0,0,0,0,0,0,0,0,0,0,1
+Surfer SEO,surferseo.com,0,0,0,0,0,0,0,0,0,0,0,1
+Writesonic,writesonic.com,0,0,0,0,0,0,0,0,0,0,0,1
+Pictory,pictory.ai,0,0,0,0,0,0,0,0,0,0,0,1
+Otter.ai,otter.ai,0,0,0,0,0,0,0,0,0,0,0,1

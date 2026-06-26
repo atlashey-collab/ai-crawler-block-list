@@ -1,0 +1,781 @@
+{
+  "n": 41,
+  "rows": [
+    {
+      "name": "OpenAI / ChatGPT",
+      "domain": "openai.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Anthropic / Claude",
+      "domain": "anthropic.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Google Gemini",
+      "domain": "gemini.google.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Perplexity",
+      "domain": "perplexity.ai",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Microsoft Copilot",
+      "domain": "copilot.microsoft.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Notion",
+      "domain": "notion.so",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Canva",
+      "domain": "canva.com",
+      "blocked": {
+        "GPTBot": true,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": true,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": true,
+        "Bytespider": true
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Grammarly",
+      "domain": "grammarly.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "HubSpot",
+      "domain": "hubspot.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Semrush",
+      "domain": "semrush.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Ahrefs",
+      "domain": "ahrefs.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Zapier",
+      "domain": "zapier.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Jasper",
+      "domain": "jasper.ai",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Copy.ai",
+      "domain": "copy.ai",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Descript",
+      "domain": "descript.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": true
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "ElevenLabs",
+      "domain": "elevenlabs.io",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Synthesia",
+      "domain": "synthesia.io",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "HeyGen",
+      "domain": "heygen.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Runway",
+      "domain": "runwayml.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "ConvertKit / Kit",
+      "domain": "kit.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Mailchimp",
+      "domain": "mailchimp.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "beehiiv",
+      "domain": "beehiiv.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Substack",
+      "domain": "substack.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Figma",
+      "domain": "figma.com",
+      "blocked": {
+        "GPTBot": true,
+        "OAI-SearchBot": true,
+        "ChatGPT-User": true,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": true,
+        "Perplexity-User": false,
+        "Google-Extended": true,
+        "CCBot": true,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Miro",
+      "domain": "miro.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Loom",
+      "domain": "loom.com",
+      "blocked": {
+        "GPTBot": true,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "ClickUp",
+      "domain": "clickup.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Monday.com",
+      "domain": "monday.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Trello",
+      "domain": "trello.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Asana",
+      "domain": "asana.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Slack",
+      "domain": "slack.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Airtable",
+      "domain": "airtable.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Calendly",
+      "domain": "calendly.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": true,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Webflow",
+      "domain": "webflow.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Wix",
+      "domain": "wix.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Squarespace",
+      "domain": "squarespace.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Shopify",
+      "domain": "shopify.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Surfer SEO",
+      "domain": "surferseo.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Writesonic",
+      "domain": "writesonic.com",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Pictory",
+      "domain": "pictory.ai",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    },
+    {
+      "name": "Otter.ai",
+      "domain": "otter.ai",
+      "blocked": {
+        "GPTBot": false,
+        "OAI-SearchBot": false,
+        "ChatGPT-User": false,
+        "ClaudeBot": false,
+        "Claude-User": false,
+        "PerplexityBot": false,
+        "Perplexity-User": false,
+        "Google-Extended": false,
+        "CCBot": false,
+        "Bytespider": false
+      },
+      "has_wildcard": true
+    }
+  ],
+  "per_bot": [
+    {
+      "token": "GPTBot",
+      "label": "GPTBot",
+      "group": "training",
+      "blocked": 3,
+      "pct": 7
+    },
+    {
+      "token": "OAI-SearchBot",
+      "label": "OAI-SearchBot",
+      "group": "citation",
+      "blocked": 1,
+      "pct": 2
+    },
+    {
+      "token": "ChatGPT-User",
+      "label": "ChatGPT-User",
+      "group": "citation",
+      "blocked": 1,
+      "pct": 2
+    },
+    {
+      "token": "ClaudeBot",
+      "label": "ClaudeBot",
+      "group": "training",
+      "blocked": 1,
+      "pct": 2
+    },
+    {
+      "token": "Claude-User",
+      "label": "Claude-User",
+      "group": "citation",
+      "blocked": 0,
+      "pct": 0
+    },
+    {
+      "token": "PerplexityBot",
+      "label": "PerplexityBot",
+      "group": "citation",
+      "blocked": 1,
+      "pct": 2
+    },
+    {
+      "token": "Perplexity-User",
+      "label": "Perplexity-User",
+      "group": "citation",
+      "blocked": 0,
+      "pct": 0
+    },
+    {
+      "token": "Google-Extended",
+      "label": "Google-Extended",
+      "group": "training",
+      "blocked": 1,
+      "pct": 2
+    },
+    {
+      "token": "CCBot",
+      "label": "CCBot (Common Crawl)",
+      "group": "training",
+      "blocked": 3,
+      "pct": 7
+    },
+    {
+      "token": "Bytespider",
+      "label": "Bytespider",
+      "group": "training",
+      "blocked": 2,
+      "pct": 5
+    }
+  ],
+  "blocks_any_citation": 1,
+  "blocks_any_training": 5,
+  "blocks_nothing": 36,
+  "blocks_nothing_pct": 88,
+  "blocks_any_citation_pct": 2,
+  "gptbot_pct": 7,
+  "oai_pct": 2
+}
