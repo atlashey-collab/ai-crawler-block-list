@@ -1,6 +1,8 @@
 # AI Crawler Block List 2026
 
-**An open dataset of which AI crawlers the top AI & SaaS tools actually block in their `robots.txt` — plus a tiny script to check any site yourself.**
+**An open dataset of which AI crawlers the top AI & SaaS tools actually block in their `robots.txt` — plus a tiny script (and a GitHub Action) to check any site yourself.**
+
+[![Use as a GitHub Action](https://img.shields.io/badge/GitHub_Action-AI_Crawler_Check-8957e5?logo=githubactions&logoColor=white)](#use-it-in-ci-github-action) · [Live study](https://aitoolsinsiderhq.com/ai-crawler-study.html) · Code MIT · Data CC BY 4.0
 
 In June 2026 we fetched the **live `robots.txt` of 41 well-known AI and SaaS tools** (OpenAI, Anthropic, Google Gemini, Notion, Canva, Figma, HubSpot, Semrush, and more) and parsed each one against the **10 AI crawlers that matter most** — the bots that train models *and* the bots that fetch pages to cite them in answers.
 
@@ -63,6 +65,7 @@ The popular narrative is "AI companies are locking their content down." The data
 data/ai-crawler-blocklist.csv    # one row per tool, one column per bot (1 = blocked)
 data/ai-crawler-blocklist.json   # same data + precomputed stats
 check_robots.py                  # check ANY robots.txt against the 10 AI crawlers
+action.yml                       # run that check as a GitHub Action in your CI
 LICENSE                          # MIT (code) — data is CC BY 4.0 (see "License" below)
 ```
 
@@ -89,6 +92,31 @@ AI crawler access for example.com
 Summary: 1 blocked, 9 allowed  |  citation bots blocked: 1
 ```
 
+## Use it in CI (GitHub Action)
+
+Ship a `robots.txt` change and accidentally block `PerplexityBot`? This Action catches it on the next push. Drop this into `.github/workflows/ai-crawler-check.yml`:
+
+```yaml
+name: AI crawler check
+on: [push, workflow_dispatch]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: atlashey-collab/ai-crawler-block-list@v1
+        with:
+          url: https://your-site.com
+          fail-on-citation-block: 'true'   # fail the build if an AI citation bot is blocked
+```
+
+| Input | Default | What it does |
+| --- | --- | --- |
+| `url` | *(required)* | Site (or full robots.txt URL) to check |
+| `fail-on-citation-block` | `true` | Fail the job if any AI **citation** bot is blocked (the ones that cost you AI-search traffic) |
+| `fail-on-any-block` | `false` | Fail the job if **any** AI bot is blocked (stricter) |
+
+The Action also writes a Markdown table of every bot's access to the **workflow run summary**, so you get a readable report on each run — no need to open the logs. This repo dogfoods it: see [`.github/workflows/check-ai-crawlers.yml`](.github/workflows/check-ai-crawlers.yml).
+
 ## Methodology
 
 - **Sample:** 41 widely-used AI and SaaS tools across writing, design, video, SEO, productivity, CRM, and the major AI labs.
@@ -112,7 +140,7 @@ Built by **[AI Tools Insider](https://aitoolsinsiderhq.com)** — AI tools, test
 
 ## License
 
-- **Code** (`check_robots.py`): MIT — see `LICENSE`.
+- **Code** (`check_robots.py`, `action.yml`): MIT — see `LICENSE`.
 - **Data** (`data/*`): **CC BY 4.0**. Use it anywhere, including commercially. Please credit *AI Tools Insider* with a link to https://aitoolsinsiderhq.com/ai-crawler-study.html.
 
 ## Cite this dataset

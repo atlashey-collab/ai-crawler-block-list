@@ -1,0 +1,36 @@
+name: 'AI Crawler Block Checker'
+description: 'Audit your robots.txt for blocked AI crawlers (ChatGPT, Claude, Perplexity, Google AI) and fail CI if you are accidentally blocking the bots that cite you in AI search.'
+author: 'AI Tools Insider'
+branding:
+  icon: 'shield'
+  color: 'purple'
+inputs:
+  url:
+    description: 'Site (or full robots.txt URL) to check, e.g. https://example.com. Required.'
+    required: true
+  fail-on-citation-block:
+    description: 'Fail the job if any AI citation bot (OAI-SearchBot, ChatGPT-User, PerplexityBot, Claude-User...) is blocked. These are the bots that decide whether ChatGPT / Perplexity can quote you, so blocking them quietly costs AI-search traffic.'
+    required: false
+    default: 'true'
+  fail-on-any-block:
+    description: 'Fail the job if ANY AI crawler is blocked (stricter than fail-on-citation-block).'
+    required: false
+    default: 'false'
+runs:
+  using: 'composite'
+  steps:
+    - name: Check AI crawler access
+      shell: bash
+      run: |
+        if [ -z "${{ inputs.url }}" ]; then
+          echo "::error::Provide the 'url' input (the site whose robots.txt to check)."
+          exit 1
+        fi
+        FLAGS=""
+        if [ "${{ inputs.fail-on-citation-block }}" = "true" ]; then
+          FLAGS="$FLAGS --fail-on-citation-block"
+        fi
+        if [ "${{ inputs.fail-on-any-block }}" = "true" ]; then
+          FLAGS="$FLAGS --fail-on-any-block"
+        fi
+        python3 "${{ github.action_path }}/check_robots.py" "${{ inputs.url }}" $FLAGS

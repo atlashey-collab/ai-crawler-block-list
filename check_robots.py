@@ -12,11 +12,19 @@ Usage:
     python3 check_robots.py example.com              # scheme optional
     cat robots.txt | python3 check_robots.py         # or pipe a robots.txt you already have
 
+CI flags (used by the bundled GitHub Action, or any pipeline):
+    --fail-on-citation-block   exit 1 if any AI *citation* bot is blocked
+    --fail-on-any-block        exit 1 if any AI bot at all is blocked
+
+Inside GitHub Actions it also writes a Markdown table to the job summary
+(via the GITHUB_STEP_SUMMARY file), so the result shows on the workflow run page.
+
 It uses the same precedence real crawlers use:
   - the most specific (longest-matching) User-agent group wins;
   - within the winning group, the longest matching path rule wins;
   - on an equal-length tie, Allow beats Disallow.
 """
+import os
 import sys
 import urllib.request
 from urllib.parse import urlparse
@@ -107,19 +115,62 @@ def is_blocked(rules, path="/"):
     return not best_allowed
 
 
+def write_step_summary(label, rows, blocked_total, blocked_citation):
+    """If running in GitHub Actions, append a Markdown table to the job summary."""
+    path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not path:
+        return
+    lines = [
+        f"## AI Crawler Access for `{label}`",
+        "",
+        "| Bot | Operator | Type | Access |",
+        "| --- | --- | --- | --- |",
+    ]
+    for token, operator, group, blocked in rows:
+        access = "BLOCKED" if blocked else "ALLOWED"
+        lines.append(f"| `{token}` | {operator} | {group} | {access} |")
+    lines += [
+        "",
+        f"**{blocked_total} blocked, {len(rows) - blocked_total} allowed** "
+        f"&nbsp;|&nbsp; **citation bots blocked: {blocked_citation}**",
+    ]
+    if blocked_citation:
+        lines.append(
+            "\n> Blocking *citation* bots makes your pages invisible in "
+            "ChatGPT, Perplexity and other AI search engines. Block training "
+            "bots if you must, but keep citation bots open."
+        )
+    lines.append(
+        "\n_Checked by [AI Crawler Block List]"
+        "(https://github.com/atlashey-collab/ai-crawler-block-list) "
+        "- [methodology](https://aitoolsinsiderhq.com/ai-crawler-study.html)._"
+    )
+    try:
+        with open(path, "a", encoding="utf-8") as f:
+            f.write("\n".join(lines) + "\n")
+    except OSError:
+        pass
+
+
 def main():
-    if not sys.stdin.isatty() and len(sys.argv) < 2:
+    args = sys.argv[1:]
+    fail_on_citation = "--fail-on-citation-block" in args
+    fail_on_any = "--fail-on-any-block" in args
+    positional = [a for a in args if not a.startswith("--")]
+
+    if positional:
+        text = fetch_robots(positional[0])
+        label = positional[0]
+    elif not sys.stdin.isatty():
         text = sys.stdin.read()
         label = "(piped robots.txt)"
-    elif len(sys.argv) >= 2:
-        text = fetch_robots(sys.argv[1])
-        label = sys.argv[1]
     else:
         print(__doc__)
         sys.exit(1)
 
     groups = parse_groups(text)
     print(f"AI crawler access for {label}")
+    rows = []
     blocked_total = blocked_citation = 0
     for token, operator, group in BOTS:
         blocked = is_blocked(rules_for(groups, token))
@@ -130,6 +181,7 @@ def main():
             if group == "citation":
                 blocked_citation += 1
                 note = "   <- invisible to this AI search engine"
+        rows.append((token, operator, group, blocked))
         dots = "." * (16 - len(token))
         print(f"  {token}{dots} {state}  ({group}, {operator}){note}")
     print(
@@ -139,6 +191,15 @@ def main():
     if blocked_citation:
         print("Tip: blocking *citation* bots costs you AI-search traffic. "
               "Block training bots if you must; keep citation bots open.")
+
+    write_step_summary(label, rows, blocked_total, blocked_citation)
+
+    if fail_on_citation and blocked_citation:
+        print(f"::error::{blocked_citation} AI citation bot(s) are blocked in robots.txt")
+        sys.exit(1)
+    if fail_on_any and blocked_total:
+        print(f"::error::{blocked_total} AI bot(s) are blocked in robots.txt")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
